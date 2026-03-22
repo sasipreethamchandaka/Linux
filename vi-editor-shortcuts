@@ -1,0 +1,115 @@
+# VI Editor Shortcuts (Quick Reference)
+
+The VI editor is a powerful tool for editing configuration files and scripts in Linux.  
+This document provides **key modes**, **commands**, and **shortcuts** used in daily work.
+
+---
+
+## 1. Management Area: VI / VIM Editor
+
+---
+
+## 2. Definition – What VI Editor Manages
+
+VI manages:
+
+- File editing  
+- Navigation within files  
+- Searching and replacing text  
+- Copying, pasting, deleting lines  
+- Working with multiple files and splits  
+
+It is widely used by system administrators and DevOps engineers.
+
+---
+
+## 3. Commands List
+
+---
+
+### Modes in VI
+
+| Mode | Used For |
+|------|----------|
+| **Normal mode** | Navigation & commands |
+| **Insert mode** | Text editing |
+| **Command mode** | Saving, quitting, searching |
+
+---
+
+### Enter/Exit Modes
+
+| Command | Used For |
+|--------|-----------|
+| `i` | Insert before cursor |
+| `a` | Append after cursor |
+| `o` | Open new line below |
+| `O` | Open new line above |
+| `Esc` | Exit insert mode |
+
+---
+
+### Navigation Shortcuts
+
+| Command | Used For |
+|--------|-----------|
+| `h` | Move left |
+| `l` | Move right |
+| `j` | Move down |
+| `k` | Move up |
+| `0` | Move to line start |
+| `$` | Move to line end |
+| `w` | Next word |
+| `b` | Previous word |
+| `gg` | Go to file start |
+| `G` | Go to file end |
+| `:n` | Go to line number n |
+
+---
+
+### Editing Shortcuts
+
+| Command | Used For |
+|--------|-----------|
+| `x` | Delete character |
+| `dd` | Delete line |
+| `dw` | Delete word |
+| `yy` | Copy line |
+| `yw` | Copy word |
+| `p` | Paste after cursor |
+| `P` | Paste before cursor |
+| `u` | Undo |
+| `Ctrl + r` | Redo |
+
+---
+
+### Search & Replace
+
+| Command | Used For |
+|--------|-----------|
+| `/text` | Search forward |
+| `?text` | Search backward |
+| `n` | Repeat search |
+| `N` | Repeat reverse search |
+| `:%s/old/new/g` | Replace all occurrences |
+| `:s/old/new/g` | Replace in current line |
+
+---
+
+### Save & Quit
+
+| Command | Used For |
+|--------|-----------|
+| `:w` | Save |
+| `:q` | Quit |
+| `:wq` | Save & quit |
+| `:q!` | Quit without saving |
+
+---
+
+## Summary
+
+- VI is essential for editing system files.  
+- Learn navigation, editing, and saving commands for efficient usage.
+
+---
