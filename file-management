@@ -1,0 +1,90 @@
+# File Management in Linux
+
+File Management allows creating, deleting, moving, copying, and viewing files and directories.  
+This document explains **what file management is**, **what it controls**, and **the essential commands**.
+
+---
+
+## 1. Management Area: File Management
+
+---
+
+## 2. Definition – What File Management Manages
+
+File Management controls:
+
+- Creating and deleting files  
+- Viewing and editing file contents  
+- Navigating directories  
+- Copying and moving files  
+- Managing file structures  
+
+It is essential for daily system usage.
+
+---
+
+## 3. Commands List
+
+---
+
+### Navigation
+
+| Command | Used For |
+|--------|-----------|
+| `ls` | List files |
+| `ls -l` | List with details |
+| `cd /path` | Change directory |
+| `pwd` | Show current directory |
+
+---
+
+### File / Directory Creation & Removal
+
+| Command | Used For |
+|--------|-----------|
+| `touch file` | Create empty file |
+| `mkdir folder` | Create folder |
+| `rmdir folder` | Delete empty folder |
+| `rm file` | Delete file |
+| `rm -r folder` | Delete folder recursively |
+
+---
+
+### Copy & Move Files
+
+| Command | Used For |
+|--------|-----------|
+| `cp file1 file2` | Copy file |
+| `cp -r dir1 dir2` | Copy directory |
+| `mv old new` | Move or rename |
+
+---
+
+### View File Content
+
+| Command | Used For |
+|--------|-----------|
+| `cat file` | View content |
+| `tac file` | View reversed |
+| `head -n 10 file` | View first 10 lines |
+| `tail -n 10 file` | View last 10 lines |
+| `tail -f logfile` | Follow logs |
+
+---
+
+### Editing Files
+
+| Command | Used For |
+|--------|-----------|
+| `nano file` | Edit file (simple editor) |
+| `vi file` | Edit file (advanced editor) |
+
+---
+
+## Summary
+
+- File management handles creation, movement, deletion, and viewing.  
+- `ls`, `cd`, `cp`, `mv`, `rm`, and `cat` are basic everyday commands.  
+- Editors like `nano` and `vi` allow modifying files.
+
+---
