@@ -1,0 +1,94 @@
+# User Management in Linux
+
+Linux is a multi-user operating system where users, groups, and permissions help maintain security and controlled access.  
+This document explains **what user management is**, **what it manages**, and **the essential commands** used in daily system administration.
+
+---
+
+## 1. Management Area: User Management
+
+---
+
+## 2. Definition – What User Management Manages
+
+User Management controls:
+
+- Creation and deletion of user accounts  
+- Passwords and authentication  
+- User home directories  
+- Login shells  
+- Locking and unlocking accounts  
+- Password expiry policies  
+- Modification of user properties (username, home, shell)  
+
+This ensures secure access and proper lifecycle handling of all system users.
+
+---
+
+## 3. Commands List
+
+Below is a clean list of important user management commands.
+
+---
+
+### User Creation
+
+| Command | Used For |
+|--------|-----------|
+| `useradd username` | Create a user (no home directory) |
+| `useradd -m username` | Create user with home directory |
+| `useradd -s /bin/bash username` | Create user with specific shell |
+| `adduser username` | Interactive user creation (Debian-based) |
+
+---
+
+### Password Management
+
+| Command | Used For |
+|--------|-----------|
+| `passwd username` | Set or change password |
+| `passwd -l username` | Lock a user account |
+| `passwd -u username` | Unlock a user account |
+| `chage -M 90 username` | Set password expiry (90 days) |
+
+---
+
+### Modify Existing Users
+
+| Command | Used For |
+|--------|-----------|
+| `usermod -l new old` | Change username |
+| `usermod -d /new/home -m username` | Change home directory |
+| `usermod -s /bin/zsh username` | Change default shell |
+| `usermod -g group username` | Change primary group |
+| `usermod -aG group username` | Add user to secondary group |
+
+---
+
+### Delete Users
+
+| Command | Used For |
+|--------|-----------|
+| `userdel username` | Delete user (keep home folder) |
+| `userdel -r username` | Delete user and home directory |
+
+---
+
+### Check User Info
+
+| Command | Used For |
+|--------|-----------|
+| `id username` | View UID, GID, groups |
+| `groups username` | Show group memberships |
+| `cat /etc/passwd` | View user list |
+| `cat /etc/shadow` | View encrypted password details (root only) |
+
+---
+
+## Summary
+
+- User management controls user accounts, access, login shells, and authentication.  
+- `useradd`, `adduser`, `usermod`, and `userdel` are core tools.
+- Password and account control uses `passwd` and `chage`.
+
+---
