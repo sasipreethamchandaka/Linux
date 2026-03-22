@@ -1,0 +1,99 @@
+# Disk Management in Linux
+
+Disk management handles viewing disks, creating partitions, formatting, mounting, and controlling storage devices.  
+This document explains **what disk management is**, **what it controls**, and **the essential commands**.
+
+---
+
+## 1. Management Area: Disk & Storage Management
+
+---
+
+## 2. Definition – What Disk Management Manages
+
+Disk Management controls:
+
+- Physical disks and partitions  
+- File systems (ext4, xfs, etc.)  
+- Mounting and unmounting drives  
+- Disk usage monitoring  
+- Logical Volume Management (LVM)  
+- Swap memory  
+
+It ensures proper storage configuration and system stability.
+
+---
+
+## 3. Commands List
+
+---
+
+### View Disks & Partitions
+
+| Command | Used For |
+|--------|-----------|
+| `lsblk` | List block devices (disks/partitions) |
+| `fdisk -l` | Show partition table |
+| `blkid` | Show filesystem UUIDs |
+| `df -h` | Check disk usage |
+| `du -sh /path` | Check directory size |
+
+---
+
+### Partition Management
+
+| Command | Used For |
+|--------|-----------|
+| `fdisk /dev/sdX` | Manage partitions (MBR) |
+| `parted /dev/sdX` | Manage partitions (GPT) |
+
+---
+
+### Formatting Partitions
+
+| Command | Used For |
+|--------|-----------|
+| `mkfs.ext4 /dev/sdX1` | Format as ext4 |
+| `mkfs.xfs /dev/sdX1` | Format as XFS |
+
+---
+
+### Mounting & Unmounting
+
+| Command | Used For |
+|--------|-----------|
+| `mount /dev/sdX1 /mnt` | Mount partition |
+| `umount /mnt` | Unmount partition |
+| `mount -o remount,rw /mnt` | Remount as read/write |
+
+---
+
+### LVM Management
+
+| Command | Used For |
+|--------|-----------|
+| `pvcreate /dev/sdX` | Create physical volume |
+| `vgcreate vg_name /dev/sdX` | Create volume group |
+| `lvcreate -L 10G -n lv_name vg_name` | Create logical volume |
+| `mkfs.ext4 /dev/vg_name/lv_name` | Format LV |
+| `mount /dev/vg_name/lv_name /mnt` | Mount LV |
+
+---
+
+### Swap Management
+
+| Command | Used For |
+|--------|-----------|
+| `mkswap /dev/sdX` | Create swap partition |
+| `swapon /dev/sdX` | Enable swap |
+| `swapoff /dev/sdX` | Disable swap |
+
+---
+
+## Summary
+
+- Disk management includes partitioning, formatting, mounting, and monitoring.  
+- LVM helps manage storage flexibly.  
+- Swap improves memory performance.
+
+---
