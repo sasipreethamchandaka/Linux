@@ -1,0 +1,77 @@
+# Network Management in Linux
+
+Network management controls interfaces, connectivity, DNS resolution, routing, and port monitoring.  
+This document explains **what network management is**, **what it manages**, and **the essential commands**.
+
+---
+
+## 1. Management Area: Network Management
+
+---
+
+## 2. Definition – What Network Management Manages
+
+Network Management controls:
+
+- Network interfaces (IP, MAC, MTU)  
+- Connectivity and routing  
+- DNS resolution  
+- Active ports and open connections  
+- Downloading and testing network performance  
+
+It ensures secure and stable communication between systems.
+
+---
+
+## 3. Commands List
+
+---
+
+### Network Interface Management
+
+| Command | Used For |
+|--------|-----------|
+| `ip a` | Show network interfaces |
+| `ifconfig` | Legacy tool to view interfaces |
+| `ip link set eth0 up` | Enable interface |
+| `ip link set eth0 down` | Disable interface |
+
+---
+
+### Connectivity Testing
+
+| Command | Used For |
+|--------|-----------|
+| `ping host` | Test connectivity |
+| `traceroute host` | Trace router hops |
+| `curl url` | Fetch website/API |
+| `wget url` | Download file |
+
+---
+
+### DNS & Domain Resolution
+
+| Command | Used For |
+|--------|-----------|
+| `nslookup domain` | DNS lookup |
+| `dig domain` | Detailed DNS info |
+| `host domain` | Resolve domain to IP |
+
+---
+
+### Ports & Network Connections
+
+| Command | Used For |
+|--------|-----------|
+| `netstat -tulnp` | Show open ports & active connections |
+| `ss -tulnp` | Modern replacement for netstat |
+| `ss -tn` | Show TCP connections |
+
+---
+
+## Summary
+
+- Network management handles interfaces, connectivity, DNS, and ports.  
+- `ip`, `ping`, `ss`, and `curl` are core networking tools.
+
+---
