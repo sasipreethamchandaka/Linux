@@ -1,0 +1,89 @@
+# Process Management in Linux
+
+Process management handles running programs, CPU usage, memory usage, background jobs, and service control.  
+This document explains **what process management is**, **what it manages**, and **the essential commands**.
+
+---
+
+## 1. Management Area: Process Management
+
+---
+
+## 2. Definition – What Process Management Manages
+
+Process Management handles:
+
+- Monitoring running processes  
+- Killing or stopping processes  
+- Adjusting CPU priority  
+- Running tasks in background or foreground  
+- Managing daemons and services  
+
+It ensures stable, efficient system operation.
+
+---
+
+## 3. Commands List
+
+---
+
+### View Processes
+
+| Command | Used For |
+|--------|-----------|
+| `ps aux` | Show all processes |
+| `ps -u username` | Show user processes |
+| `pgrep name` | Find PID by name |
+| `pidof process` | Get PID |
+
+---
+
+### Kill or Control Processes
+
+| Command | Used For |
+|--------|-----------|
+| `kill PID` | Stop a process |
+| `kill -9 PID` | Force kill process |
+| `pkill name` | Kill by name |
+| `kill -STOP PID` | Pause process |
+| `kill -CONT PID` | Resume process |
+
+---
+
+### Process Priority
+
+| Command | Used For |
+|--------|-----------|
+| `nice -n value command` | Run with priority |
+| `renice -n value -p PID` | Change running process priority |
+
+---
+
+### Background & Foreground Jobs
+
+| Command | Used For |
+|--------|-----------|
+| `command &` | Run in background |
+| `jobs` | Show background jobs |
+| `fg %1` | Bring job to foreground |
+| `bg %1` | Resume job in background |
+| `Ctrl+Z` | Suspend a process |
+
+---
+
+### Monitoring Tools
+
+| Command | Used For |
+|--------|-----------|
+| `top` | Real-time monitoring |
+| `htop` | Advanced process viewer |
+
+---
+
+## Summary
+
+- Process management controls running programs and system resources.  
+- `ps`, `kill`, `top`, and `nice` are essential tools.  
+- Background job control uses `fg`, `bg`, and `jobs`.
+
+---
